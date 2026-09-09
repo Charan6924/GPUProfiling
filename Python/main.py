@@ -33,3 +33,11 @@ for n in sizes:
     tflops = (2 * n**3) / (latency_ms * 1e9)
 
     print(f"N={n:5d} | latency={latency_ms:8.3f} ms | throughput={tflops:8.2f} TFLOP/s")
+
+'''
+N=  512 | latency=   0.068 ms | throughput=    3.95 TFLOP/s
+N= 1024 | latency=   0.063 ms | throughput=   34.34 TFLOP/s
+N= 2048 | latency=   0.114 ms | throughput=  150.86 TFLOP/s
+N= 4096 | latency=   1.036 ms | throughput=  132.72 TFLOP/s
+N= 8192 | latency=   7.302 ms | throughput=  150.57 TFLOP/s
+'''
