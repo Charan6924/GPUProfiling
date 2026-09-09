@@ -1,0 +1,8 @@
+module avail cuda
+srun -A dlw -p gpu --gres=gpu:1 --mem=16gb --constraint=gpu2h100 --pty bash
+srun -A dlw -p gpu --gres=gpu:1 --mem=16gb --constraint=gpu4090 --pty bash
+srun -p cgpudlw --nodelist=cgput004 -c 24 --time=72:00:00 --gres=gpu:4 --mem=120g --pty /bin/bash
+./nsys_easy.sh -o test_profile ./test
+srun --jobid=3550189 --overlap --pty bash
+module load GCC/12.3.0
+module load CUDA/12.6.0
